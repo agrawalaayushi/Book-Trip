@@ -1,0 +1,14 @@
+.flight-search-app .flight-info-container {
+  width: 100%;
+  float: left;
+  padding: 10px 0 33px 0;
+  height: 100vh; }
+  .flight-search-app .flight-info-container .left-col {
+    width: 26%;
+    float: left;
+    background-color: #F5F5F6;
+    border-right: 1px solid black; }
+  .flight-search-app .flight-info-container .right-col {
+    width: 72%;
+    float: right;
+    background-color: #F5F5F6; }
