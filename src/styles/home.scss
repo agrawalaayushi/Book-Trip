@@ -2,18 +2,25 @@
   .flight-info-container {
     width: 100%;
     float: left;
-    padding: 10px 0 33px 0;
+    padding: 10px;
     height: 100vh;
     .left-col {
       width: 26%;
       float: left;
       background-color: #F5F5F6;
-      border-right: 1px solid black;
+      height: 100vh;
+      .flight-search-form {
+        padding: 20px;
+      }
     }
     .right-col {
-      width: 72%;
+      width: 73%;
       float: right;
       background-color:#F5F5F6;
+      height: 100vh;
+      .flight-list {
+        padding: 20px;
+      }
     }
   }
 }
