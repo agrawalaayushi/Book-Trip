@@ -2,7 +2,6 @@ import React, { Component }  from 'react'
 import { connect } from 'react-redux';
 import { isEqual } from 'lodash';
 import { Header } from '../Header/header';
-import SearchBar from '../common/search-bar';
 import '../../styles/app.scss';
 import SearchForm from '../Flight/search-form';
 import FlightList from '../Flight/flight-list';
@@ -18,9 +17,9 @@ class Home extends Component {
   // Methods
   //-----------------------------------
 
-  handleSearchMovies(query) {
+  searchDetailsCallback(searchDetails) {
     this.setState({
-      searchKeyword: query
+      flightDetails: searchDetails
     })
     // this.props.handleSearchMovies(query);
   }
@@ -34,22 +33,16 @@ class Home extends Component {
   }
 
   render() {
+    const { flightDetails } = this.state;
     return (
       <div className="flight-search-app">
         <Header />
-        {/* <div className="search-bar">
-          <div className="search-bar-wrapper">
-            <SearchBar
-              handleSearchQueryCallback={(query)=> this.handleSearchMovies(query)}         
-              />
-          </div>
-        </div> */}
         <div className="flight-info-container">
           <div className="left-col">
-            <SearchForm />
+            <SearchForm searchDetailsCallback={(searchDetails) => this.searchDetailsCallback(searchDetails)} />
           </div>
           <div className="right-col">
-            <FlightList />
+            <FlightList flightDetails={flightDetails}/>
           </div>
         </div>
       </div>
