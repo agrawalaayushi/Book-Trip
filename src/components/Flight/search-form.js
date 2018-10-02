@@ -137,7 +137,6 @@ class SearchForm extends Component {
               type="radio" 
               name="oneWay" 
               value="oneWay"
-              defaultChecked
               checked={this.state.fields["tripType"] === "oneWay"}
               onChange={this.handleTripTypeChange} /> One Way
 
